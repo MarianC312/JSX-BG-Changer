@@ -28,11 +28,15 @@ class Main extends React.Component{
         }
     }
     
+    componentDidMount(){
+        this.colorUp();
+    }
+    
     render(){
         const color = this.state.bg;
         return(
             <div id="bg-rand" style={{backgroundColor: color}}>
-                <button type="button" onClick={this.colorUp} class="btn btn-primary">Change!</button>
+                <button type="button" onClick={this.colorUp} className="btn btn-primary">Change!</button>
             </div>
         )
     }
